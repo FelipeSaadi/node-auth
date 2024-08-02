@@ -12,4 +12,4 @@ router.get('/ping', (req, res) => {
 router.post('/register', authController.register)
 router.post('/login', authController.login)
 
-router.get('/users', Auth.private, userController.findAll)
+router.get('/users', Auth.private, userController.getAll)

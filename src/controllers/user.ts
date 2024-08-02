@@ -1,8 +1,8 @@
 import { RequestHandler } from "express";
-import { User } from "../models/User";
+import * as userService from '../services/user'
 
-export const findAll: RequestHandler = async (req, res) => {
-  const users = await User.findAll()
+export const getAll: RequestHandler = async (req, res) => {
+  const users = await userService.getAll()
   const list: string[] = []
 
   users.map((user) => {
